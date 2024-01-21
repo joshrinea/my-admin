@@ -1,0 +1,30 @@
+<div class="login-wrapper">
+  <div class="imgBox">
+    <img
+      src="https://media.istockphoto.com/id/1465316262/photo/businessman-inspecting-paperwork-document-of-business-data-analysis-working-management-report.jpg?s=612x612&w=0&k=20&c=kpD3aZWVIH0VfOwdG4RX5vPRFPMftg5Dp4xCVo3Lito="
+      alt=""
+    />
+  </div>
+  <div class="contentBox">
+    <div class="form">
+      <div>
+        <h2>Login</h2>
+        <div class="input-wrapper">
+          <input
+            class="input"
+            type="text"
+            id="emailInput"
+            autocomplete="off"
+            required
+          />
+          <span class="span">Email</span>
+        </div>
+        <div class="input-wrapper">
+          <input class="input" type="password" id="passwordInput" required />
+          <span class="span">Password</span>
+        </div>
+        <a [routerLink]="'/dashboard'" class="loginBtn" type="button">Login</a>
+      </div>
+    </div>
+  </div>
+</div>

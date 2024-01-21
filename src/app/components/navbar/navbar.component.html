@@ -1,0 +1,94 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a
+      class="navbar-brand fs-3"
+      data-bs-toggle="offcanvas"
+      href="#offcanvasExample"
+      role="button"
+      aria-controls="offcanvasExample"
+    >
+      <i class="bx bx-menu"></i>
+    </a>
+  </div>
+</nav>
+
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Dashboard</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div style="position: absolute; bottom: 10px; right: 10px">
+      <button
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#logoutModal"
+        class="btn btn-secondary w-100"
+        style="width: 100% !important"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Logout Modal -->
+<div
+  class="modal fade"
+  id="logoutModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Logout</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex align-items-center gap-3 flex-row my-3">
+          <img src="../../../assets/images/icons/power-off.png" width="100" height="100" alt="" />
+          <p>Are you sure you want to Logoff?</p>
+        </div>
+        <div class="d-flex justify-content-end gap-2">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="logout()">
+            Logout
+          </button>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-dismiss="modal"
+      >
+        Close
+      </button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div> -->
+    </div>
+  </div>
+</div>

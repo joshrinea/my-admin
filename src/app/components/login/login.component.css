@@ -1,0 +1,163 @@
+.login-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.login-wrapper .imgBox {
+  position: relative;
+  width: 40%;
+  height: 100%;
+}
+
+.login-wrapper .imgBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(225deg, #e91e63, #03a9f4); */
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.login-wrapper .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-wrapper .contentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+.login-wrapper .contentBox .form {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper .contentBox .form h2 {
+  color: #121212;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  border-bottom: 4px solid #03a9f4;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #7f8fa6;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.input-wrapper .span {
+  position: absolute;
+  left: 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #7f8fa6;
+  pointer-events: none;
+  transition: 0.3s ease;
+  letter-spacing: 0.1rem;
+}
+
+.input-wrapper input:valid,
+.input-wrapper input:focus {
+  border: 2px solid #03a9f4;
+}
+
+.input-wrapper input:valid ~ span,
+.input-wrapper input:focus ~ span {
+  /* border: 2px solid #03a9f4; */
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0 10px;
+  background: #ffffff;
+  letter-spacing: 0.1rem;
+}
+
+.loginBtn {
+  width: 100%;
+  max-width: 300px;
+  padding: 13px;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  background: #03a9f4;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: all 0.5s ease;
+}
+
+.loginBtn:hover {
+  border-radius: 0px;
+}
+
+@media (max-width: 800px) {
+  .login-wrapper .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .login-wrapper .contentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .login-wrapper .contentBox .form {
+    width: 100%;
+    height: 80%;
+    background-color: #ffffff;
+    background: rgb(255, 255, 255 / 0.9);
+    margin: 50px;
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-wrapper .imgBox {
+    width: 0%;
+  }
+}
